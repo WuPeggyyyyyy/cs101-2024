@@ -27,17 +27,17 @@ class ReadClass
         string filename="main.cpp";
     
     public:
-        ReadClass(){}
+        //ReadClass(){}
         void showClass(){
             ifstream in;
             string line;
             in.open(filename);
-            if(in.fail()){
+            /*if(in.fail()){
                 cout<<"Error opening a file"<<endl;
-            }
+            }*/
             while(getline(in, line)){
                 if(line[0]=='c'){
-                    amount+=1;
+                    amount++;
                 }
             }
             cout<<amount<<" class in "<<filename<<endl;
